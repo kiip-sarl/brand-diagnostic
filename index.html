@@ -941,10 +941,10 @@ const BOOKING_URL = "https://cal.com/kenny-cretin-kiip/premier-echange?user=kenn
 // Le diagnostic tourne entièrement dans le navigateur : il ne peut jamais appeler
 // Resend directement avec une clé secrète sans l'exposer publiquement dans le code
 // source (n'importe quel visiteur pourrait la lire et l'utiliser). La route
-// https://v1-brand-diagnostic.vercel.app/api/send-diagnostic s'exécute
+// /api/send-diagnostic s'exécute
 // côté serveur : la clé RESEND_API_KEY y reste secrète, définie en variable
 // d'environnement sur Vercel (jamais ici). L'appel est centralisé sur cet endpoint.
-const DIAGNOSTIC_EMAIL_ENDPOINT = "https://v1-brand-diagnostic.vercel.app/api/send-diagnostic";
+const DIAGNOSTIC_EMAIL_ENDPOINT = "/api/send-diagnostic";
 
 // Logo Kiip. encodé en base64 (PNG, redimensionné à 600px de large) pour être
 // intégré directement dans le PDF généré côté client — évite tout problème de
